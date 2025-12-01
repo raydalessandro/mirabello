@@ -10,6 +10,9 @@
 const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co';
 const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
 
+// Identifica il negozio - cambia questo valore per ogni landing page
+const NEGOZIO = document.body.dataset.negozio || 'mirabello';
+
 // ============================================
 // DOM Elements
 // ============================================
@@ -194,6 +197,7 @@ async function submitToSupabase(data) {
             telefono: data.telefono,
             email: data.email,
             privacy_accepted: data.privacy,
+            negozio: NEGOZIO,
             user_agent: navigator.userAgent
         })
     });

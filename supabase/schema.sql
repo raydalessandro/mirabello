@@ -14,6 +14,7 @@ CREATE TABLE IF NOT EXISTS public.contacts (
     telefono VARCHAR(20) NOT NULL,
     email VARCHAR(255) NOT NULL,
     privacy_accepted BOOLEAN NOT NULL DEFAULT true,
+    negozio VARCHAR(50) NOT NULL DEFAULT 'mirabello',  -- Identifica il negozio di provenienza
     created_at TIMESTAMPTZ DEFAULT NOW() NOT NULL,
     ip_address INET,
     user_agent TEXT,
@@ -25,6 +26,9 @@ CREATE TABLE IF NOT EXISTS public.contacts (
     CONSTRAINT telefono_format CHECK (telefono ~* '^\+?[0-9]{9,15}$'),
     CONSTRAINT privacy_must_be_accepted CHECK (privacy_accepted = true)
 );
+
+-- Se la tabella esiste già, aggiungi la colonna negozio:
+-- ALTER TABLE public.contacts ADD COLUMN IF NOT EXISTS negozio VARCHAR(50) NOT NULL DEFAULT 'mirabello';
 
 -- ============================================
 -- 2. Commenti tabella
@@ -49,6 +53,10 @@ ON public.contacts(created_at DESC);
 -- Indice per ricerca email (check duplicati)
 CREATE INDEX IF NOT EXISTS idx_contacts_email 
 ON public.contacts(email);
+
+-- Indice per filtro per negozio
+CREATE INDEX IF NOT EXISTS idx_contacts_negozio 
+ON public.contacts(negozio);
 
 -- ============================================
 -- 4. Row Level Security (RLS)
