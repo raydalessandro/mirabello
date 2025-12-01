@@ -89,6 +89,22 @@ TO service_role
 USING (true)
 WITH CHECK (true);
 
+-- Policy: Utenti autenticati possono leggere tutti i contatti (admin)
+DROP POLICY IF EXISTS "Authenticated users can read contacts" ON public.contacts;
+CREATE POLICY "Authenticated users can read contacts" 
+ON public.contacts
+FOR SELECT 
+TO authenticated
+USING (true);
+
+-- Policy: Utenti autenticati possono eliminare contatti (admin)
+DROP POLICY IF EXISTS "Authenticated users can delete contacts" ON public.contacts;
+CREATE POLICY "Authenticated users can delete contacts" 
+ON public.contacts
+FOR DELETE 
+TO authenticated
+USING (true);
+
 -- ============================================
 -- 6. Funzione per rate limiting (opzionale)
 -- ============================================
@@ -185,14 +201,21 @@ WHERE tablename = 'contacts';
 3. Incolla tutto questo script e clicca "Run"
 4. Vai su Dashboard > Settings > API
 5. Copia "Project URL" e "anon public" key
-6. Aggiorna js/main.js con le credenziali:
+6. Aggiorna js/main.js E admin.html con le credenziali:
    - SUPABASE_URL = 'https://TUO_PROJECT_ID.supabase.co'
    - SUPABASE_ANON_KEY = 'TUA_ANON_KEY'
+
+CREARE UTENTE ADMIN:
+1. Vai su Dashboard > Authentication > Users
+2. Clicca "Add user" > "Create new user"
+3. Inserisci email e password per l'admin
+4. Usa queste credenziali per accedere a admin.html
 
 TEST:
 - Vai su Dashboard > Table Editor > contacts
 - La tabella dovrebbe essere vuota
 - Compila il form sulla landing page
 - Verifica che il contatto appaia nella tabella
+- Accedi a admin.html con le credenziali create
 */
 
