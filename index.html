@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WindTre Store Cantù Mirabello - Super Internet Casa 5G con velocità fino a 300 Mega. Internet illimitato per tutta la famiglia.">
+    <title>WindTre Store Cantù Mirabello - Super Internet Casa 5G</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizziamo cookie tecnici necessari al funzionamento del sito.</p>
+            <div class="cookie-actions">
+                <button id="cookie-accept" class="btn-cookie-accept">Accetta</button>
+                <a href="cookie.html" class="cookie-link">Maggiori informazioni</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <span class="logo">WIND<span class="logo-tre">TRE</span></span>
+            </div>
+            <div class="tagline">SEMPRE CONNESSO ANCHE DOVE LA FIBRA NON C'È</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">LIMITED EDITION</div>
+            <h1 class="hero-title">
+                <span class="hero-title-super">SUPER</span>
+                <span class="hero-title-internet">INTERNET CASA 5G</span>
+            </h1>
+            <p class="hero-subtitle">INTERNET ILLIMITATO CON VELOCITÀ FINO A</p>
+            <div class="hero-speed">
+                <span class="speed-number">300</span>
+                <span class="speed-unit">MEGA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📶</div>
+                    <h3>Internet Illimitato</h3>
+                    <p>Navigazione senza limiti fino a 300 Mega</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Giga Illimitati</h3>
+                    <p>e Wi-Fi Calling inclusi per gli smartphone di tutta la famiglia</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📡</div>
+                    <h3>Modem Wi-Fi 7</h3>
+                    <p>ed eventuale Antenna 5G inclusi</p>
+                </div>
+                <div class="benefit-card benefit-prime">
+                    <div class="benefit-icon">🎬</div>
+                    <h3>Amazon Prime</h3>
+                    <p>Prime 12 mesi con Film, Serie TV e la UEFA Champions League</p>
+                    <small>Per Prime si applicano i relativi termini e condizioni</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Info Section -->
+    <section class="store-info">
+        <div class="container">
+            <h2>Il tuo team esperto e di fiducia ti aspetta</h2>
+            <div class="store-details">
+                <div class="store-name">
+                    <strong>WINDTRE STORE</strong>
+                    <span class="store-location">CANTÙ MIRABELLO</span>
+                </div>
+                <div class="store-address">
+                    <p>C/O Centro Commerciale "MIRABELLO"</p>
+                    <p>Via Lombardia, 68</p>
+                    <p>22063 Cantù (CO)</p>
+                </div>
+            </div>
+            <div class="whatsapp-cta">
+                <span class="whatsapp-label">SCRIVICI SU WHATSAPP!</span>
+                <a href="https://wa.me/393928451482" class="whatsapp-number" target="_blank" rel="noopener">
+                    <span class="whatsapp-icon">💬</span>
+                    392 845 1482
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section" id="contattaci">
+        <div class="container">
+            <h2>Contattaci</h2>
+            <p class="form-intro">Compila il form e ti ricontatteremo al più presto</p>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="success-message" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Grazie per averci contattato!</h3>
+                <p>Ti ricontatteremo al più presto.</p>
+            </div>
+
+            <!-- Error Toast -->
+            <div class="error-toast" id="error-toast" style="display: none;">
+                <span class="error-icon">⚠</span>
+                <span class="error-text">Si è verificato un errore. Riprova più tardi.</span>
+                <button class="error-close" id="error-close">×</button>
+            </div>
+
+            <form id="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" required minlength="2" placeholder="Inserisci il tuo nome">
+                        <span class="error-message" id="nome-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="cognome">Cognome *</label>
+                        <input type="text" id="cognome" name="cognome" required minlength="2" placeholder="Inserisci il tuo cognome">
+                        <span class="error-message" id="cognome-error"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Telefono *</label>
+                        <input type="tel" id="telefono" name="telefono" required placeholder="Es. 333 1234567">
+                        <span class="error-message" id="telefono-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Es. nome@email.com">
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                </div>
+                <div class="form-group form-group-checkbox">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">
+                            Ho letto e accetto la <a href="privacy.html" target="_blank">Privacy Policy</a> *
+                        </span>
+                    </label>
+                    <span class="error-message" id="privacy-error"></span>
+                </div>
+                <button type="submit" class="btn-submit" id="submit-btn">
+                    <span class="btn-text">Invia richiesta</span>
+                    <span class="loading-indicator" style="display: none;">
+                        <span class="spinner"></span>
+                        Invio in corso...
+                    </span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-small">WIND<span class="logo-tre">TRE</span></span>
+                    <p>WindTre Store Cantù Mirabello</p>
+                </div>
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="cookie.html">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-note">
+                <p>Limited Edition disponibile in particolari aree d'Italia coperte da tecnologia FWA e soggetta a limitazioni tecniche geografiche.</p>
+                <p class="eco-note">🌱 Rispetta l'ambiente: non gettare questo volantino per terra.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 WindTre Store Cantù Mirabello. Tutti i diritti riservati.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cookie.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
