@@ -7,8 +7,8 @@
 // Supabase Configuration
 // ============================================
 // TODO: Sostituisci con le tue credenziali Supabase
-const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
+const SUPABASE_URL = 'https://hmdrwhmllywwmvqesscv.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhtZHJ3aG1sbHl3d212cWVzc2N2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ1OTk4MTksImV4cCI6MjA4MDE3NTgxOX0.QuTF_GTOqeLHvWhVvbEtKs5842oyYHV8NGrZzLPy--Y';
 
 // Identifica il negozio - cambia questo valore per ogni landing page
 const NEGOZIO = document.body.dataset.negozio || 'mirabello';
